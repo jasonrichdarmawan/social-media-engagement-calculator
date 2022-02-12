@@ -2,7 +2,7 @@ import sys
 from instaloader import Instaloader, Profile, exceptions
 loader = Instaloader()
 
-if(sys.argv[2]):
+if(len(sys.argv) > 2):
   loader.load_session_from_file(sys.argv[1])
 
   if loader.test_login is None:
@@ -11,7 +11,7 @@ if(sys.argv[2]):
     loader.save_session_to_file()
 
 try:
-  profile = Profile.from_username(loader.context, sys.argv[3])
+  profile = Profile.from_username(loader.context, sys.argv[3] if len(sys.argv) > 2 else sys.argv[1])
 except exceptions.ProfileNotExistsException:
   print("This username does not exist.")
   exit()
