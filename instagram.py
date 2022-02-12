@@ -2,8 +2,12 @@ import sys
 from instaloader import Instaloader, Profile, exceptions
 loader = Instaloader()
 
+if(sys.argv[2]):
+  print("logging in")
+  loader.login(sys.argv[1], sys.argv[2])
+
 try:
-  profile = Profile.from_username(loader.context, sys.argv[1])
+  profile = Profile.from_username(loader.context, sys.argv[3])
 except exceptions.ProfileNotExistsException:
   print("This username does not exist.")
   exit()
