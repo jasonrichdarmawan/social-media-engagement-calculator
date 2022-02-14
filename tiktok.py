@@ -32,6 +32,6 @@ avg_comments = total_num_comments / total_num_posts
 avg_shares = total_num_shares / total_num_posts
 avg_views = total_num_views / total_num_posts
 
-er = (total_num_likes + total_num_comments + total_num_shares) / total_num_views * 100
+er = (total_num_likes + total_num_comments + total_num_shares) / total_num_views
 
 print(f"avg. likes: {avg_likes:,}, avg. comments: {avg_comments:,}, avg. shares: {avg_shares:,}, avg. views: {avg_views:,}, views: {total_num_views:,}, followers: {num_followers:,}, er: {er:.2%}")
