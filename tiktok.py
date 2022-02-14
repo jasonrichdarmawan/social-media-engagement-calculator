@@ -34,13 +34,4 @@ avg_views = total_num_views / total_num_posts
 
 er = (total_num_likes + total_num_comments + total_num_shares) / total_num_views * 100
 
-print('avg. likes: %d, avg. comments: %d, avg. shares: %d, avg. views: %d, views: %d, followers: %d, er: %.2f%%' % (avg_likes, avg_comments, avg_shares, avg_views, total_num_views, num_followers, er))
-
-# counter=1
-# postscount=1
-# for tiktok in tiktoks:
-#   if(counter >= postscount):
-#     break
-#   counter=counter+1
-
-# print("followers: %d" % (num_followers))
+print(f"avg. likes: {avg_likes:,}, avg. comments: {avg_comments:,}, avg. shares: {avg_shares:,}, avg. views: {avg_views:,}, views: {total_num_views:,}, followers: {num_followers:,}, er: {er:.2%}")

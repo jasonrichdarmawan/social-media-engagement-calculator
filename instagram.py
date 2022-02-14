@@ -35,4 +35,4 @@ avg_likes = total_num_likes / total_num_posts
 avg_comments = total_num_comments / total_num_posts
 er = (avg_comments + avg_likes) / num_followers * 100
 
-print("avg. likes: %d, avg. comments: %d, followers: %d, er: %.2f%%" % (avg_likes, avg_comments, num_followers, er))
+print(f"avg. likes: {avg_likes:,}, avg. comments: {avg_comments:,}, followers: {num_followers:,}, er: {er:.2%}")
