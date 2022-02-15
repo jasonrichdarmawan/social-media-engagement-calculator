@@ -34,4 +34,4 @@ avg_views = total_num_views / total_num_posts
 
 er = (total_num_likes + total_num_comments + total_num_shares) / total_num_views
 
-print(f"avg. likes: {avg_likes:,.2f}, avg. comments: {avg_comments:,.2f}, avg. shares: {avg_shares:,.2f}, avg. views: {avg_views:,.2f}, views: {total_num_views:,.2f}, followers: {num_followers:,.2f}, er: {er:.2%}")
+print(f"avg. likes: {avg_likes:,.0f}, avg. comments: {avg_comments:,.0f}, avg. shares: {avg_shares:,.0f}, avg. views: {avg_views:,.0f}, views: {total_num_views:,.0f}, followers: {num_followers:,.0f}, er: {er:.2%}")
