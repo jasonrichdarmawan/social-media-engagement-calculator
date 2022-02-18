@@ -11,7 +11,7 @@ if(len(sys.argv) > 2):
     loader.save_session_to_file()
 
 try:
-  profile = Profile.from_username(loader.context, sys.argv[1] if len(sys.argv) < 2 else sys.argv[1])
+  profile = Profile.from_username(loader.context, sys.argv[1] if len(sys.argv) < 2 else sys.argv[3])
 except exceptions.ProfileNotExistsException:
   print("This username does not exist.")
   exit()
