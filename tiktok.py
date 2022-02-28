@@ -1,22 +1,20 @@
 import sys
-import time
 from TikTokApi import TikTokApi
 
-api = TikTokApi.get_instance()
+api = TikTokApi(custom_verify_fp=sys.argv[1])
 
-postscount = 20
+user = api.user(sys.argv[2])
 
-tiktoks = api.by_username(sys.argv[2], count=postscount, custom_verifyFp=sys.argv[1])
-
-num_followers = tiktoks[0]['authorStats']['followerCount']
+num_followers = user.info_full()['stats']['followerCount']
 total_num_likes = 0
 total_num_comments = 0
 total_num_shares = 0
 total_num_views = 0
 total_num_posts = 0
 
+postscount = 20
 counter = 0
-for post in tiktoks:
+for post in user.videos(count=postscount):
   if (counter >= postscount):
     break
   stats = post['stats']
